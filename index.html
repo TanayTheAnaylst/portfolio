@@ -1,0 +1,299 @@
+<html><head><base href="https://portfolio.tanay-kumar.com/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tanay Kumar - Data Analyst Portfolio</title><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script><style>
+:root {
+  --bg-color: #f0f0f0;
+  --text-color: #333;
+  --accent-color: #4a90e2;
+  --secondary-color: #e74c3c;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  --bg-color: #222;
+  --text-color: #f0f0f0;
+  --accent-color: #64b5f6;
+  --secondary-color: #ff7675;
+}
+
+header {
+  background-color: var(--accent-color);
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+nav {
+  background-color: var(--secondary-color);
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+  color: var(--accent-color);
+}
+
+.project {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9em;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+#canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+#dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 5px 0;
+  }
+}
+</style>
+</head>
+<body>
+<div id="canvas-container"></div>
+<button id="dark-mode-toggle">🌓</button>
+
+<header>
+  <h1>Tanay Kumar</h1>
+  <p>Data Analyst | Machine Learning Enthusiast</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience & Skills</a></li>
+    <li><a href="#personal">Personal Info</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Tanay Kumar, a passionate Data Analyst with over 2 years of experience in transforming raw data into actionable insights. With a strong educational background in Electronics and Communication Engineering from Haldia Institute of Technology, I've honed my skills in data cleaning, machine learning, and financial data analysis.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Project Showcase</h2>
+    <div class="project">
+      <h3>Hitachi - Machine Learning Project</h3>
+      <p>Developed predictive models for equipment failures, resulting in a 30% reduction in unplanned downtime and saving the company millions in potential losses.</p>
+    </div>
+    <div class="project">
+      <h3>My Eye Doc - Data Cleaning and Cleansing</h3>
+      <p>Implemented robust data cleaning strategies that improved the accuracy of patient records by 95%, enhancing the quality of healthcare delivery.</p>
+    </div>
+    <div class="project">
+      <h3>Denali - Financial Data Analysis</h3>
+      <p>Conducted extensive financial data analysis to assist in critical decision-making processes, leading to a 15% increase in operational efficiency.</p>
+    </div>
+    <div class="project">
+      <h3>Other Data Cleaning Projects</h3>
+      <p>Currently handling multiple data cleansing projects across various industries, showcasing versatility and adaptability in different data environments.</p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience and Skills</h2>
+    <p>In my professional journey, I've had the privilege of working with clients in healthcare and finance sectors, gaining invaluable insights into industry-specific data challenges. Currently, I'm contributing my expertise at Xoriant Solutions, where I continue to expand my skillset and tackle complex data problems.</p>
+    <h3>Key Skills:</h3>
+    <div class="skills">
+      <span class="skill">Data Cleaning</span>
+      <span class="skill">Machine Learning</span>
+      <span class="skill">Financial Data Analysis</span>
+      <span class="skill">Python</span>
+      <span class="skill">R</span>
+      <span class="skill">SQL</span>
+      <span class="skill">Tableau</span>
+      <span class="skill">Power BI</span>
+    </div>
+  </section>
+
+  <section id="personal">
+    <h2>Personal Information</h2>
+    <ul>
+      <li><strong>Location:</strong> Bangalore, India</li>
+      <li><strong>Date of Birth:</strong> October 19, 2000</li>
+      <li><strong>Current CTC:</strong> 5.8 Lakh</li>
+      <li><strong>Expected CTC:</strong> 8 Lakh</li>
+      <li><strong>Notice Period:</strong> Immediate</li>
+      <li><strong>Relocation:</strong> Open to relocate</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div>
+      <p><strong>Email:</strong> <a href="mailto:tanayroy12586@gmail.com">tanayroy12586@gmail.com</a></p>
+      <p><strong>Phone:</strong> +91 8789356249</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tanaytheanalyst" target="_blank">linkedin.com/in/tanaytheanalyst</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/TanayTheAnalyst" target="_blank">github.com/TanayTheAnalyst</a></p>
+    </div>
+  </section>
+</main>
+
+<script>
+// 3D Background Animation
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
+const material = new THREE.MeshBasicMaterial({ color: 0x4a90e2, wireframe: true });
+const torusKnot = new THREE.Mesh(geometry, material);
+scene.add(torusKnot);
+
+camera.position.z = 30;
+
+function animate() {
+  requestAnimationFrame(animate);
+  torusKnot.rotation.x += 0.01;
+  torusKnot.rotation.y += 0.01;
+  renderer.render(scene, camera);
+}
+animate();
+
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+darkModeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+});
+
+// Form Submission
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  // Here you would typically send the form data to a server
+  alert('Thank you for your message! I will get back to you soon.');
+  contactForm.reset();
+});
+
+// Smooth Scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Responsive Design
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+</script>
+</body></html>
